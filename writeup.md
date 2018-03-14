@@ -25,7 +25,7 @@ The PID components lead to following vehicle beahvior:
 
   - p-Part: keeps the vehicle on straight tracks in the middle of the road , with an oscillation around the "target: cte=0"
   - i-Part: trims the vehicle on the "target: cte=0" and will help avoid oscillation around cte=0 on a straight track. On a curvy track the i-part tends to influence the steering bevhior negatively by gaining to much error on curves. A reset of the i-error (e.g. when cte is 0 again) would avoid the contribution of large gains created by permanent deviation. 
-  - d-Part:  ist essential for steering action in sharp turns. The increase of cte compared to the last cte will lead to a large d-error output and following a counteract reaction to keep the vehicle especially on sharp turns on the track.
+  - d-Part:  ist essential for steering action in sharp turns. The increase of cte compared to the last cte will lead to a large d-error output. This leads to a counteract reaction to keep the vehicle especially on sharp turns on the track.
 
 
 Adaptations for better Performance:
@@ -38,7 +38,7 @@ if (cte>1){
     return Kp*p_error + Ki*i_error + Kd*d_error;
   };
 ```
-This feature helps to increase the PID performance on sharp turns by weighting the d-part with the acutal cte.
+This feature helps to increase the PID performance on sharp turns by a weighted d-part with the acutal cte.
 
 The final PID Parameters, manually tuned, are:
 `p:-0.08  i:0  d:-0.45` 
