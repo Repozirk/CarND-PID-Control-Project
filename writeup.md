@@ -1,6 +1,4 @@
-﻿﻿﻿﻿[//]: # (Image References)
-[image1]: ./results/Dataset_1.PNG
-[image2]: ./results/Dataset_2.PNG﻿
+
 
 
 # PID-Control
