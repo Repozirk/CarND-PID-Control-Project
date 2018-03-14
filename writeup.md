@@ -3,7 +3,7 @@
 [image2]: ./results/Dataset_2.PNG﻿
 
 
-# Unscented Kalman Filter
+# PID-Control
 This is Project 4 of Udacity Self-Driving Car Nanodegree program. 
 The goal of the project is to apply a PID Controller for steering a vehicle around the Simulator Track.
 
